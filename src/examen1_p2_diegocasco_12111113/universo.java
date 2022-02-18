@@ -15,6 +15,10 @@ public class universo {
     private String nombre;
     ArrayList <Escuadron> teams;
 
+    universo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -34,6 +38,11 @@ public class universo {
     public universo(String nombre, ArrayList<Escuadron> teams) {
         this.nombre = nombre;
         this.teams = teams;
+    }
+
+    @Override
+    public String toString() {
+        return "universo{" + "nombre=" + nombre + ", teams=" + teams + '}';
     }
     
 }

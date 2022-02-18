@@ -16,7 +16,7 @@ public class Escuadron {
     private String lugar_base;
     private String HeroeoVillano;
     ArrayList <persona> miembros;
-    private boolean heroeoVillano;
+    boolean heroeoVillano;
     persona lider;
 
     public String getNombre() {

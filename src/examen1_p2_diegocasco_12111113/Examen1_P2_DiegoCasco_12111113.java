@@ -40,7 +40,7 @@ public class Examen1_P2_DiegoCasco_12111113 {
                             + "1.3-Eliminar universos\n"
                             + "1.4-Listar"));
                     if(opcion==1){
-                        String name=JOptionPane.showInputDialog("Ingrese el nombre del alumno: ");
+                        String name=JOptionPane.showInputDialog("Ingrese el nombre del personaje: ");
                         universos.add(new universo());
                     }if(opcion==2){
                         int pos= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion del universo que desea modificar: "));
@@ -54,13 +54,40 @@ public class Examen1_P2_DiegoCasco_12111113 {
                       int pos= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion del universo que desea modificar: "));
                         if(pos<universos.size()){
                             if(universos.get(pos) instanceof universo){
-                                ((universo) universos.get(pos)).remove(pos);
+                                ((universo) universos.remove(pos)).remove(pos);
                             }
                         }  
+                    }if(opcion==4){
+                        String salida = "";
+                        for (Object temp : universos) {
+                            if (temp instanceof universo) {
+                                salida += "" + universos.indexOf(temp) + " -" + temp + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
                     }
                 }
             }if(opcion==2){
-                
+                int opcion2=7;
+                while(opcion2!=0){
+                    opcion2=Integer.parseInt(
+                    JOptionPane.showInputDialog("0-salir"
+                            + "1.1-Crear Escuadron\n"
+                            + "1.2-Modificar universo\n"
+                            + "1.3-Eliminar universos\n"
+                            + "1.4-Listar"));
+                    if(opcion==1){
+                        String name=JOptionPane.showInputDialog("Ingrese el nombre del personaje: ");
+                        String lugar=JOptionPane.showInputDialog("Ingrese el lugar(puebo o ciudad): ");
+                        String goodobad=JOptionPane.showInputDialog("Ingrese si hereo o villan: ");
+                        if(goodobad=="heroe"){
+                            heroeovillano=true;
+                        }else if(goodobad=="villan"){
+                            heroe=false;
+                        }
+                        universos.add(new Escuadron(name, lugar, goodobad, universos,true, lider));
+                    }
+                }    
             }
         }
     }
