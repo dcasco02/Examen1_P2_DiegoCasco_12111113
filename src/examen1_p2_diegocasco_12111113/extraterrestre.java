@@ -9,6 +9,14 @@ package examen1_p2_diegocasco_12111113;
  *
  * @author dcasc
  */
-public class extraterrestre {
+public class extraterrestre extends persona {
+
+    public boolean isTiene_escuadron() {
+        return tiene_escuadron;
+    }
+
+    public void setTiene_escuadron(boolean tiene_escuadron) {
+        this.tiene_escuadron = tiene_escuadron;
+    }
     
 }

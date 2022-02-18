@@ -9,6 +9,23 @@ package examen1_p2_diegocasco_12111113;
  *
  * @author dcasc
  */
-public class superhumano {
+public class superhumano extends persona {
+    private String superpoder;
+
+    public String getSuperpoder() {
+        return superpoder;
+    }
+
+    public void setSuperpoder(String superpoder) {
+        this.superpoder = superpoder;
+    }
+
+    public boolean isTiene_escuadron() {
+        return tiene_escuadron;
+    }
+
+    public void setTiene_escuadron(boolean tiene_escuadron) {
+        this.tiene_escuadron = tiene_escuadron;
+    }
     
 }
