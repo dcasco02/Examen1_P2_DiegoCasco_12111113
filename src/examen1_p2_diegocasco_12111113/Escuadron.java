@@ -17,6 +17,7 @@ public class Escuadron {
     private String HeroeoVillano;
     ArrayList <persona> miembros;
     private boolean heroeoVillano;
+    persona lider;
 
     public String getNombre() {
         return nombre;
@@ -56,6 +57,23 @@ public class Escuadron {
 
     public void setHeroeoVillano(boolean heroeoVillano) {
         this.heroeoVillano = heroeoVillano;
+    }
+
+    public persona getLider() {
+        return lider;
+    }
+
+    public void setLider(persona lider) {
+        this.lider = lider;
+    }
+
+    public Escuadron(String nombre, String lugar_base, String HeroeoVillano, ArrayList<persona> miembros, boolean heroeoVillano, persona lider) {
+        this.nombre = nombre;
+        this.lugar_base = lugar_base;
+        this.HeroeoVillano = HeroeoVillano;
+        this.miembros = miembros;
+        this.heroeoVillano = heroeoVillano;
+        this.lider = lider;
     }
     
 }

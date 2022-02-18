@@ -82,5 +82,21 @@ public class persona {
     public void setTiene_escuadron(boolean tiene_escuadron) {
         this.tiene_escuadron = tiene_escuadron;
     }
+
+    public persona(String nombre, String debilidad, String poder, String heroeoVillano, int fuerza, int habilidad_mental, int habilidad_fisica, boolean tiene_escuadron) {
+        this.nombre = nombre;
+        this.debilidad = debilidad;
+        this.poder = poder;
+        this.heroeoVillano = heroeoVillano;
+        this.fuerza = fuerza;
+        this.habilidad_mental = habilidad_mental;
+        this.habilidad_fisica = habilidad_fisica;
+        this.tiene_escuadron = tiene_escuadron;
+    }
+
+    @Override
+    public String toString() {
+        return "persona{" + "nombre=" + nombre + ", debilidad=" + debilidad + ", poder=" + poder + ", heroeoVillano=" + heroeoVillano + ", fuerza=" + fuerza + ", habilidad_mental=" + habilidad_mental + ", habilidad_fisica=" + habilidad_fisica + ", tiene_escuadron=" + tiene_escuadron + '}';
+    }
     
 }

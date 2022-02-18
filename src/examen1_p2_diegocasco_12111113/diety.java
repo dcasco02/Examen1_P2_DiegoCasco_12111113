@@ -36,5 +36,11 @@ public class diety extends persona {
     public void setTiene_escuadron(boolean tiene_escuadron) {
         this.tiene_escuadron = tiene_escuadron;
     }
+
+    public diety(boolean creyentes, String religion_mitologia, String nombre, String debilidad, String poder, String heroeoVillano, int fuerza, int habilidad_mental, int habilidad_fisica, boolean tiene_escuadron) {
+        super(nombre, debilidad, poder, heroeoVillano, fuerza, habilidad_mental, habilidad_fisica, tiene_escuadron);
+        this.creyentes = creyentes;
+        this.religion_mitologia = religion_mitologia;
+    }
     
 }

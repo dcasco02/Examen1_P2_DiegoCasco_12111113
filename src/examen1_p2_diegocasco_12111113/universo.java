@@ -30,5 +30,10 @@ public class universo {
     public void setTeams(ArrayList<Escuadron> teams) {
         this.teams = teams;
     }
+
+    public universo(String nombre, ArrayList<Escuadron> teams) {
+        this.nombre = nombre;
+        this.teams = teams;
+    }
     
 }
